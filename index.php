@@ -46,11 +46,11 @@
     <nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Tentang Saya</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Riwayat Hidup</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portofolio</span></a></li>
+        <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Layanan</span></a></li>
+        <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li> -->
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -60,12 +60,10 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Adji Pangestu</h1>
-      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p>
+      <p>Saya seorang <span class="typed" data-typed-items="Web Developer, Freelancer"></span></p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
@@ -78,8 +76,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>About</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Tentang Saya</h2>
+          <p> Saya sangat tertarik pada dunia programming terutama Web programming. Dengan programming saya bisa membantu orang disekitar saya dengan aplikasi yang saya buat. Itu merupakan kebahagiaan tersendiri bagi saya, karena aplikasi saya dapat menunjang pekerjaan mereka.  </p>
         </div>
 
         <div class="row">
@@ -87,33 +85,31 @@
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content">
-            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <h3>Web Developer.</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Mempelajari hal baru merupakan tantangan untuk menjadi lebih berkembang dan hal itu merupakan salah satu cara untuk menghargai waktu yang kita miliki
             </p>
             <div class="row">
               <div class="col-lg-6">
+                <?php
+                  $tanggal_lahir = "1994-05-31";
+                  $sekarang = date("Y-m-d");
+                  $diff = abs(strtotime($sekarang) - strtotime($tanggal_lahir));
+                  $usia = floor($diff / (365*60*60*24));
+                ?>
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Tanggal Lahir:</strong> <span><?php echo date("d M Y", strtotime($tanggal_lahir)); ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Whatsapp / HP:</strong> <a href=""> <span>082231277574</span> </a> </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Kota:</strong> <span>Malang - Jawa Timur, Indonesia</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Usia:</strong> <span><?php echo $usia; ?></span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>adji.pangestu31@gmail.com</span></li>
                 </ul>
               </div>
             </div>
-            <p>
+            <!-- <p>
               Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
               Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>
+            </p> -->
           </div>
         </div>
 
@@ -125,56 +121,53 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Facts</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Keahlian</h2>
+          <p>Dalam dunia programming keahlian memecahkan masalah sangat penting, karena hal tersebut sangat diperlukan untuk menunjang pekerjaan sebagai programmer. Selain itu, berikut adalah beberapa keahlian yang saya miliki</p>
         </div>
 
         <div class="row">
 
-          <div class="col-lg-3 col-md-6">
+          <div class="col-lg-3 col-md-3">
             <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Happy Clients</p>
+              <i class="bi bi-code-square"></i>
+              <p style="font-size: 20px;">PHP / Laravel</p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="col-lg-3 col-md-3">
             <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Projects</p>
+              <i class="bi bi-code-square"></i>
+              <p style="font-size: 20px;">Javascript / JQuery / AJAX</p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="col-lg-3 col-md-3">
             <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Hours Of Support</p>
+              <i class="bi bi-code-square"></i>
+              <p style="font-size: 20px;">Database / MySql</p>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="col-lg-3 col-md-3">
             <div class="count-box">
-              <i class="bi bi-award"></i>
-              <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Awards</p>
+              <i class="bi bi-code-square"></i>
+              <p style="font-size: 20px;">CSS / Bootstrap</p>
             </div>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Facts Section -->
+    </section>
+    <!-- End Facts Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <!-- <section id="skills" class="skills section-bg">
       <div class="container" data-aos="fade-up">
-
+          
         <div class="section-title">
-          <h2>Skills</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Keahlian</h2>
+          <p>Dalam dunia programming keahlian memecahkan masalah sangat penting. Selain itu, berikut adalah beberapa keahlian yang saya miliki</p>
         </div>
 
         <div class="row skills-content">
@@ -182,23 +175,20 @@
           <div class="col-lg-6">
 
             <div class="progress">
-              <span class="skill">HTML <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              <span class="skill">HTML </span>
+              <div class="progress-bar-wrap border-bottom">
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">CSS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar-wrap border-bottom">
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">JavaScript <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar-wrap border-bottom">
               </div>
             </div>
 
@@ -208,22 +198,19 @@
 
             <div class="progress">
               <span class="skill">PHP <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar-wrap border-bottom">
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">WordPress/CMS <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar-wrap border-bottom">
               </div>
             </div>
 
             <div class="progress">
               <span class="skill">Photoshop <i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar-wrap border-bottom">
               </div>
             </div>
 
@@ -232,66 +219,66 @@
         </div>
 
       </div>
-    </section><!-- End Skills Section -->
+    </section> -->
+    <!-- End Skills Section -->
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Resume</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Riwayat Hidup</h2>
+          <p> Dibawah ini saya buat ringkasan daftar riwayat hidup baik ketika masih sekolah atau kuliah dan juga perusahaan tempat saya pernah bekerja</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6">
-            <h3 class="resume-title">Sumary</h3>
+            <!-- <h3 class="resume-title">Saat Ini</h3>
             <div class="resume-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <h4>PT. Ongkowidjojo</h4>
+              <p><em>Bekerja sebagai web programmer yang membuat aplikasi untuk menunjang pekerjaan kantor dan juga bagian </em></p>
               <ul>
                 <li>Portland par 127,Orlando, FL</li>
                 <li>(123) 456-7891</li>
                 <li>alice.barkley@example.com</li>
               </ul>
-            </div>
+            </div> -->
 
-            <h3 class="resume-title">Education</h3>
+            <h3 class="resume-title">Edukasi</h3>
             <div class="resume-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+              <h4>STMIK ASIA Malang</h4>
+              <h5>2012 - 2018</h5>
+              <p><em>Teknologi Informasi</em></p>
+              <p>Mempelajari sistem perangkat lunak yang akan digunakan untuk membuat aplikasi dalam bentuk website, android, ataupun desktop. Juga diajarkan ilmu manajemen untuk mengatur alur sebuah aplikasi</p>
             </div>
             <div class="resume-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+              <h4>SMAN 2 Tanggul</h4>
+              <h5>2009 - 2012</h5>
+              <p><em>Ilmu Pengetahuan Alam (IPA)</em></p>
+              <p>Mempelajari semua hal tentang ilmu pengetahuan alam seperti Fisika, Biologi, Kimia, dll. Juga belajar tentang Matematika bahkan beberapa pelajaran ilmu pengetahuan sosial seperti Sosiologi, Sejarah, dll</p>
             </div>
           </div>
+
           <div class="col-lg-6">
-            <h3 class="resume-title">Professional Experience</h3>
+            <h3 class="resume-title">Pengalaman Profesional</h3>
             <div class="resume-item">
-              <h4>Senior graphic design specialist</h4>
+              <h4> PT. Ongkowidjojo </h4>
               <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
+              <p><em>IT Programmer / Web Development </em></p>
               <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                <li>Membuat aplikasi berbasis web untuk menunjang pekerjaan kantor dan juga bagian produksi</li>
+                <li> Aplikasi ERP, Meeting, Quality Control, Helpdesk, Inventory merupakan aplikasi yang saya buat </li>
+                <li> Maintenance aplikasi yang sudah berjalan </li>
+                <!-- <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li> -->
               </ul>
             </div>
             <div class="resume-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <h4>Apotek Sehat</h4>
+              <h5>2017 - 2019</h5>
+              <p><em>IT Support &amp; IT Programmer</em></p>
               <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                <li> Membuat aplikasi tracking pesanan pada apotek, sehingga customer bisa melacak pesanannya sudah sampai pada tahap apa </li>
+                <li> Maintenance komputer dan printer pada perusahaan yang berada dibawah naungan Apotek Sehat </li>
               </ul>
             </div>
           </div>
@@ -548,7 +535,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials section-bg">
+    <!-- <section id="testimonials" class="testimonials section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -569,7 +556,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -582,7 +569,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -595,7 +582,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -608,7 +595,7 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
             <div class="swiper-slide">
               <div class="testimonial-item">
@@ -621,17 +608,18 @@
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section> -->
+    <!-- End Testimonials Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -694,7 +682,8 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section> -->
+    <!-- End Contact Section -->
 
   </main><!-- End #main -->
 
